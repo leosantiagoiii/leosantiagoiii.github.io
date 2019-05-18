@@ -15,22 +15,6 @@
 			src:url('fonts/playfairitalic.ttf');
 		}
 		@font-face{
-			font-family:playfairBold;
-			src:url('fonts/playfairBold.ttf');
-		}
-		@font-face{
-			font-family:playfairReg;
-			src:url('fonts/playfairReg.ttf');
-		}
-		@font-face{
-			font-family:nunitoExLi;
-			src:url('fonts/nunitoExLi.ttf');
-		}
-		@font-face{
-			font-family:robotoli;
-			src:url('fonts/robotoli.ttf');
-		}
-		@font-face{
 			font-family:monsli;
 			src:url('fonts/monsli.ttf');
 		}
@@ -51,12 +35,37 @@
 		.landH1{
 			font-family:playfairItalic;
 			font-weight: 300;
-			font-size:8.5vh;
+			font-size:8.9vh;
 			color:white;
+			line-height:50px;
+			text-align:left;
 		}
 		.landP{
+			margin-top:30px;
+			font-size:15px;
+			font-family:monsli;
+			text-align: justify;
+			line-height:25px;
+			color:white;
+		}
+		.linkz{
+			margin-top:30px;
 			font-family:monsli;
 			color:white;
+			font-size: 17px;
+			font-weight: 300;
+		}
+		.linkz > a{
+			color:white;
+			font-size:15px;
+			text-decoration: none;
+			transition: 0.2s;
+		}
+		.linkz > a:hover{
+			color:black;
+			background-color:white;
+			transition: 0.2s;
+			padding:0 0px 0 0px;
 		}
 	</style>
 </head>
@@ -64,8 +73,10 @@
 	<div class="landing">
 		<div class="home">
 			<h1 class="landH1">Archivo de Leo</h1>
-			<p class="landP">Hey! I guess we're doing the formalities here, right? Anyway, I'm Leo. I'm a fresh graduate who's interested in designing and other frontend stuff. I do backend, too, but that's a conversation for another day! I like horror films and the John Wick Series. It's absolutely a pleasure to meet you!</p>
-			<a href="">Studio</a> <a href="">Github</a>
+			<p class="landP">Hey! I guess we're doing the formalities here, right? Anyway, I'm Leo. I'm a fresh graduate who's interested in designing and other frontend stuff. I do backend, too, but that's a conversation for another day! I like horror films and the John Wick Series.<br><b>It's a pleasure to finally meet you!</b></p>
+			<div class="linkz">
+				<a href="">My Work</a> &nbsp; : &nbsp; <a href="https://github.com/leosantiagoiii">GitHub</a>
+			</div>
 		</div>
 	</div>
 </body>
