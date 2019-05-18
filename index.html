@@ -3,16 +3,70 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
+	<title>Leo Santiago</title>
 	<link rel="stylesheet" href="">
 	<style>
 		*{
 			margin:0;
 			padding:0;
 		}
+		@font-face{
+			font-family:playfairItalic;
+			src:url('fonts/playfairitalic.ttf');
+		}
+		@font-face{
+			font-family:playfairBold;
+			src:url('fonts/playfairBold.ttf');
+		}
+		@font-face{
+			font-family:playfairReg;
+			src:url('fonts/playfairReg.ttf');
+		}
+		@font-face{
+			font-family:nunitoExLi;
+			src:url('fonts/nunitoExLi.ttf');
+		}
+		@font-face{
+			font-family:robotoli;
+			src:url('fonts/robotoli.ttf');
+		}
+		@font-face{
+			font-family:monsli;
+			src:url('fonts/monsli.ttf');
+		}
+		body{
+			/*background-image:url("images/landing-bg.png");
+			background-size:cover;
+			background-repeat: none;*/
+			background-color:black;
+		}
+		.home{
+			position: absolute;
+			top: 45%;
+			left: 50%;
+			-moz-transform: translateX(-50%) translateY(-45%);
+			-webkit-transform: translateX(-50%) translateY(-45%);
+			transform: translateX(-50%) translateY(-45%);
+		}
+		.landH1{
+			font-family:playfairItalic;
+			font-weight: 300;
+			font-size:8.5vh;
+			color:white;
+		}
+		.landP{
+			font-family:monsli;
+			color:white;
+		}
 	</style>
 </head>
 <body>
-	<h1>Site Under Maintenance</h1>
+	<div class="landing">
+		<div class="home">
+			<h1 class="landH1">Archivo de Leo</h1>
+			<p class="landP">Hey! I guess we're doing the formalities here, right? Anyway, I'm Leo. I'm a fresh graduate who's interested in designing and other frontend stuff. I do backend, too, but that's a conversation for another day! I like horror films and the John Wick Series. It's absolutely a pleasure to meet you!</p>
+			<a href="">Studio</a> <a href="">Github</a>
+		</div>
+	</div>
 </body>
 </html>
