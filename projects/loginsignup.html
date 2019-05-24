@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>login|signup</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			background-color: #f1f0f0;
+		}
+		.bgimg{
+			background-size: 100%;
+			width:100%;
+			min-height: 100%;
+			min-width: 100%;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+		.header-content{
+			width: 100%;
+			text-align: center;
+			font-weight: 300;
+			color: white;
+		}
+		nav{
+			background-color: white;
+			padding: 15px;
+			width: 100%;
+		}
+		nav:hover{
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		.navlink{
+			letter-spacing: 1px;
+			margin:56px;
+			padding: 10px 25px 10px 25px;
+		}
+		.navlink:link{
+			color: black;
+			text-decoration: none;
+		}
+		.navlink:visited{
+			color: black;
+			text-decoration: none;
+		}
+		.navlink:hover{
+			font-style: italic;
+			text-decoration: none;
+		}
+		.navlink:active{
+			color: black;
+			text-decoration: none;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		.navigation{
+			font-family: helvetica;
+			font-size: 15px;
+		}
+		.mottosize{
+			width: 33%;
+			margin: 153px;
+		}
+
+
+
+
+		.tablerow{
+			padding-left: 30px;
+			padding-top: 11px;
+		}
+		.footerhead{
+			letter-spacing: 2px;
+			font-weight: bold;
+			font-size: 16px;
+		}
+		.footerdesc{
+			font-size: 12px;
+		}
+		footer{
+			background-color: slategray;
+			width: 100%;
+			font-family: helvetica;
+			color: white;
+			padding-bottom: 40px;
+		}
+		.footerlinks{
+			color: white;
+			text-decoration: none;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		.footerlinks:visited{
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+			color: white;
+			text-decoration: none;
+		}
+		.footerlinks:hover{
+			color: white;
+			text-decoration: none;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		.footlogo{
+			border-style: solid;
+			padding:5px 10px;
+			border-color: white;
+			border-width: 5px;
+			box-shadow:none;
+			width: 80%;
+			text-align: center;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+
+
+		p{
+			font-family: helvetica;
+		}
+		input{
+			padding: 12px 20px;
+			border:solid;
+			border-width: 1px;
+			border-color: #ccc;
+			border-radius: 4px;
+		}
+		.logsign{
+			padding: 18px 25px 55px 25px;
+		}
+		button{
+			padding: 12px 20px;
+			border:solid;
+			border-width: 1px;
+			border-color: #ccc;
+			border-radius: 4px;
+		}
+
+	</style>
+</head>
+<body>
+	<header class="bgimg">
+		<div class="header-content">
+			<nav class="navigation">
+				<a class="navlink" href="index_j.html">home</a> 
+				<a class="navlink" href="loginsignup.html">login/sign-up</a>
+				<a class="navlink" href="shop.html">shop</a>
+				<a class="navlink" href="contact.html">contact us</a>
+				<a class="navlink" href="findashop.html">find a store</a>
+			</nav>
+		</div>
+	</header>
+
+
+	<table width="100%" style="border-collapse: collapse;">
+		<tr>
+			<td width="50%" style="text-align: right;" class="logsign">
+				<form>
+					<h3>Sign up</h3>
+					<input type="text" style="width:45%" name="firstname" placeholder="First Name">
+					<input type="text" style="width:45%" name="lastname" placeholder="Last Name"><br><br>
+					<select name="country" style="width: 90%">
+						<option value="Philippines">Philippines</option>
+						<option value="UnitedKingdom">United Kingdom</option>
+						<option value="India">India</option>
+						<option value="Finland">Finland</option>
+						<option value="Pakistan">Pakistan</option>
+						<option value="Chile">Chile</option>
+					</select><br><br>
+					<input style="width: 90%" type="text" name="email" placeholder="Email"><br><br>
+					<input  style="width: 90%" type="text" name="username" placeholder="Username"><br><br>
+					<input  style="width: 90%" type="password" name="password" placeholder="Password"><br><br>
+					<input type="submit" name="submit">
+				</form>
+			</td>
+			<td width="50%" style="text-align: left; position: absolute;" class="logsign">
+				<form>
+					<h3>Log in</h3>
+					<form>
+						<input style="width: 90%" type="text" name="Username" placeholder="Username"><br><br>
+						<input style="width: 90%" type="password" name="password" placeholder="Password"><br><br>
+						<button type="submit">Login</button>
+					</form>
+				</form>
+			</td>
+		</tr>
+	</table>
+
+	<footer>
+		<table width="100%">
+			<tr>
+				<td class="tablerow" width="33.33%">
+					<br><p class="footerhead">THE COMPANY</p>
+					<p class="footerdesc">
+						<a class="footerlinks" href="careers.html">Careers</a>
+						<br>
+						<a class="footerlinks" href="findashop.html">Store Locator</a>
+						<br>
+						<a class="footerlinks" href="AboutUs.html">About Us</a>
+					</p>
+				</td>
+				<td class="tablerow" width="33.33%">
+					<br><p class="footerhead">CUSTOMER CARE</p>
+					<p class="footerdesc">
+						<a class="footerlinks" href="AboutUs.html">Social Responsibility</a>
+						<br>
+						<a class="footerlinks" href="contact.html">Contact Us</a>
+						<br>
+						<a class="footerlinks" href="SocialMedia.html">Social Media</a>
+					</p>
+				</td>
+				<td class="tablerow" width="33.33%">
+					<br>
+					<center>
+					<img class="footlogo" src="Logo.png">
+					</center>
+				</td>
+			</tr>
+		</table>
+	</footer>
+
+</body>
+</html>

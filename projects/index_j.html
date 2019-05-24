@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>The JavaCup</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			background-color: #f1f0f0;
+		}
+		hr { 
+		    display: block;
+		    margin-top: 0.5em;
+		    margin-bottom: 0.5em;
+		    margin-left: auto;
+		    margin-right: auto;
+		    border-style: inset;
+		    border-width: 1px;
+		}
+		.bgimg{
+			background-size: cover;
+			width:100%;
+			background-image: url("HeaderBackground.png");
+			min-height: 100%;
+			min-width: 100%;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+		.header-content{
+			width: 100%;
+			text-align: center;
+			font-weight: 300;
+			color: white;
+		}
+		nav{
+			background-color: white;
+			opacity: 0.98;
+			padding: 15px;
+
+			width: 100%;
+		}
+		nav:hover{
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		.navlink{
+			letter-spacing: 1px;
+			margin:56px;
+			padding: 10px 25px 10px 25px;
+		}
+		.navlink:link{
+			color: black;
+			text-decoration: none;
+		}
+		.navlink:visited{
+			color: black;
+			text-decoration: none;
+		}
+		.navlink:hover{
+			font-style: italic;
+			text-decoration: none;
+		}
+		.navlink:active{
+			color: black;
+			text-decoration: none;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		.navigation{
+			font-family: helvetica;
+			font-size: 15px;
+		}
+		.logologo{
+			margin-top: 153px;
+			margin-right: 153px;
+			margin-left: 153px;
+			margin-bottom: 153px;
+			width: 45%;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+			opacity:0.86;
+		}
+		.logologo:hover{
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+			opacity: 0.97;
+			width: 60%;
+		}
+		.about-us-link{
+			position: relative;
+			top: -135px;
+			width: 100px;
+			font-family: Helvetica;
+			border-radius: 0px;
+			padding: 10px;
+			border-style: solid;
+			border-width: 3px;
+			border-color: white;
+			text-align: center;
+			font-size: 123%;
+		}
+		.about-us-link:hover{
+			font-style: italic;
+			box-shadow: 5px 7px black;
+			color: black;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		#aboutlinkbelowlogo{
+			color: white;
+			text-decoration: none;
+		}
+		#aboutlinkbelowlogo:hover{
+			color: white;
+			text-decoration: none;
+		}
+		#food-drink-feature{
+			font-family: helvetica;
+			font-size: 20px;
+			color: white;
+		}
+		.emailsub{
+			text-align: center;
+			font-family: Century Schoolbook;
+			font-size: 25px;
+			background-color: #f1f0f0;
+		}
+		.emailimg{
+			height: 210px;
+		}
+		.articlesec{
+			font-family: Times New Roman;
+			text-align: center;
+			font-style: oblique;
+			padding:10px;
+		}
+		.photoart{
+			width: 245px;
+		}
+		.articlemain{
+			padding-right:0px;
+			color: black;
+			text-decoration: none;
+		}
+		.articlemain:hover{
+			font-style: italic;
+			color: black;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+			text-decoration: none;
+		}
+		.row-row{
+			padding: 0px 90px 60px 90px;
+		}
+		h2{
+			font-family: Century Schoolbook;
+		}
+		footer{
+			background-color: slategray;
+			width: 100%;
+			font-family: helvetica;
+			color: white;
+			padding-bottom: 40px;
+		}
+		.footerlinks{
+			color: white;
+			text-decoration: none;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		.footerlinks:visited{
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+			color: white;
+			text-decoration: none;
+		}
+		.footerlinks:hover{
+			color: white;
+			text-decoration: none;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		.footlogo{
+			border-style: solid;
+			padding:5px 10px;
+			border-color: white;
+			border-width: 5px;
+			box-shadow:none;
+			width: 80%;
+			text-align: center;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		.tablerow{
+			padding-left: 30px;
+			padding-top: 11px;
+		}
+		.footerhead{
+			letter-spacing: 2px;
+			font-weight: bold;
+			font-size: 16px;
+		}
+		.footerdesc{
+			font-size: 12px;
+		}
+		.articlebottompadding{
+			padding-bottom: 55px;
+			padding-right: 20px;
+		}
+		.emailsubscription{
+			margin:45px 0px;
+		}
+		.discoverfood{
+			background-image: url("FoodDiscover.png");
+			background-size: cover;
+			text-align: center;
+			padding: 150px;
+		}
+		.discoverdrink{
+			background-image: url("DrinkDiscover.png");
+			background-size: cover;
+			padding: 150px;
+			text-align: center;
+		}
+		#linkhere{
+			color: black;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		#linkhere:hover{
+			background-color: black;
+			color: white;
+			text-decoration: none;
+			padding: 0px 10px;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		.effect{
+			text-decoration: none;
+			color: white;
+			transition:.5s ease;
+			-o-transition:.5s;
+  			-ms-transition:.5s;
+			-moz-transition:.5s;
+			-webkit-transition:.5s;
+		}
+		.effect:hover{
+			color:white;
+			text-decoration: none;
+		}
+</style>
+</head>
+<body>
+	<header class="bgimg">
+		<div class="header-content">
+			<nav class="navigation">
+				<a class="navlink" href="index_j.html">home</a> 
+				<a class="navlink" href="loginsignup.html">login/sign-up</a>
+				<a class="navlink" href="shop.html">shop</a>
+				<a class="navlink" href="contact.html">contact us</a>
+				<a class="navlink" href="findashop.html">find a store</a>
+			</nav>	
+			<a href="index_j.html">
+						<img class="logologo" src="Logo.png">
+			</a>	
+				<center><div class="about-us-link"><a href="AboutUs.html" id="aboutlinkbelowlogo"><center><b>about us</b></center></a></center>
+		</div>
+	</header>
+
+	<!--       -->
+	<table width="100%" id="food-drink-feature" style="border-collapse: collapse">
+		<tr>
+			<center>
+			<td class="discoverfood"><div><img src="SpoonFork.png"><br><p><a class="effect" href="foodch.html">discover our food</a></p></div></td>
+
+			<td class="discoverdrink"><div><img src="Frappe.png"><br><p><a class="effect" href="drinkch.html">discover our drinks</a></p></div></td>
+			</center>
+		</tr>
+	</table>
+	<!--       -->
+
+	<center>
+	<table width="100%" class="emailsubscription">
+		<tr>
+			<td class="emailsub" width="50%">
+				<b>FREEBIES</b> and <b>DISCOUNTS?</b><br>Sign-up <a href="loginsignup.html" id="linkhere">here</a>
+			</td>
+			<td width="50%"><center><img class="emailimg" src="Email.png"></center></td>
+		</tr>
+	</table>
+	</center>
+	<!--       -->
+
+	<hr>
+	<article style="background-color: #f1f0f0" styl>
+		<h1 class="articlesec"><b>Latest News</b></h1>
+		<center>
+		<table width="88%">
+			<tr>
+				<td><img class="photoart" src="Art1.png"></td>
+				<td><img class="photoart" src="Art2.png"></td>
+				<td><img class="photoart" src="Art3.png"></td>
+				<td><img class="photoart" src="Art4.png"></td>
+			</tr>
+			<tr>
+				<td><h2><a href="Article1.html" class="articlemain">Article 1</a></h2></td>
+				<td><h2><a href="Article2.html" class="articlemain">Article 2</a></h2></td>
+				<td><h2><a href="Article3.html" class="articlemain">Article 3</a></h2></td>
+				<td><h2><a href="Article4.html" class="articlemain">Article 4</a></h2></td>
+			</tr>
+			<tr>
+				<td  class="articlebottompadding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum purus massa, at lobortis orci.</td>
+				<td class="articlebottompadding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum purus massa, at lobortis orci.</td>
+				<td class="articlebottompadding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum purus massa, at lobortis orci.</td>
+				<td class="articlebottompadding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum purus massa, at lobortis orci.</td>
+			</tr>
+		</table>
+		</center>
+	</article>
+
+	<!--       -->
+
+	<footer>
+		<table width="100%">
+			<tr>
+				<td class="tablerow" width="33.33%">
+					<br><p class="footerhead">THE COMPANY</p>
+					<p class="footerdesc">
+						<a class="footerlinks" href="careers.html">Careers</a>
+						<br>
+						<a class="footerlinks" href="findashop.html">Store Locator</a>
+						<br>
+						<a class="footerlinks" href="AboutUs.html">About Us</a>
+					</p>
+				</td>
+				<td class="tablerow" width="33.33%">
+					<br><p class="footerhead">CUSTOMER CARE</p>
+					<p class="footerdesc">
+						<a class="footerlinks" href="AboutUs.html">Social Responsibility</a>
+						<br>
+						<a class="footerlinks" href="contact.html">Contact Us</a>
+						<br>
+						<a class="footerlinks" href="SocialMedia.html">Social Media</a>
+					</p>
+				</td>
+				<td class="tablerow" width="33.33%">
+					<br>
+					<center>
+					<img class="footlogo" src="Logo.png">
+					</center>
+				</td>
+			</tr>
+		</table>
+	</footer>
+</body>
+</html>
