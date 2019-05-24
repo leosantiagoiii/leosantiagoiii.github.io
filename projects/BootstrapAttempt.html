@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Social Media_Bootstrap</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			padding: 15px;
+		}
+		textarea{
+			width: 200px; 
+			min-width:100%; 
+			max-width:100%; 
+			height:100px; 
+			min-height:100px;  
+			max-height:100px;
+			border-radius: 5px;
+			border-color: black;
+			padding: 5px 7px;
+		}
+		.content-post{
+			background-color: rgb(252, 252, 252);
+			margin: 0 0 15px 0;
+			padding: 10px 15px;
+		}
+		.profile-post{
+			background-color: rgb(252, 252, 252);
+			margin: 0 0 15px 0;
+			padding: 10px 15px;
+		}
+		.content-post h3{
+			color: #3d3d3d;
+		}
+		.content-post h5{
+			color: #3d3d3d;
+			position: relative;
+			font-size: 17px;
+		}
+		.content-post a:hover{
+			text-decoration: none;
+		}
+		.post-img{
+			width: 100%;
+		}
+		.pp{
+			width: 100%;
+			border-radius: 10%;
+		}
+		.headerimg{
+			background-image: url("header.jpg");
+			background-size: cover;
+			color: white;
+			text-shadow: 2px 2px 2px 2px black;
+		}
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="">
+		<ul class="nav nav-tabs" style="position: sticky; -webkit-position: sticky;">
+			<li style="position: relative; float: right;"><a data-toggle="tab" href="#menu4">Logout</a></li>
+			<li style="position: relative; float: right;"><a data-toggle="tab" href="#menu3">Settings</a></li>
+			<li style="position: relative; float: right; z-index: 3;"><a href="#menu2" title="" data-toggle="popover" data-trigger="hover" data-placement="left" data-content="no notifications">Notifications</a></li>
+			<li style="position: relative; float: right;"><a data-toggle="tab" href="#menu1">Profile</a></li>
+			<li style="position: relative; float: right;" class="active"><a data-toggle="tab" href="#home">Home</a></li>
+			<li style="margin-right: 10px;"><img src="logo.jpg" height="35px" style="border-radius: 6px;"></li>
+			<li><input class="form-control" id="myInput" type="text" placeholder="Search" style="width: 600px;"></li>
+		</ul>
+	</div>
+	<div style="padding: 15px 0px; z-index: 1;">
+		<div class="tab-content">
+			<div id="home" class="tab-pane fade in active">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="content-post">
+							<h3 style="padding: 0; margin:0 0 8px 0;">Post Something, Leo!</h3>
+							<textarea placeholder="Ano ang iniisp mo?"></textarea>
+						</div>
+						<div class="content-post">
+							<table width="100%" style="margin-bottom: 10px;">
+								<tr>
+									<td width="8%" style="padding-right: 10px;"><img src="pp1.jpg" class="pp"></td>
+									<td width="88%"><h5 style="padding: 0; margin:0 0 8px 0;"><a href title="" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Contact my manager for inquiries">Jay-Z</a> posted:</h5></td>
+									<td width="4%"><a style="cursor: pointer;"><span class="glyphicon glyphicon-trash"></span></a></td>
+								</tr>
+							</table>
+							<blockquote class="blockquote">Blue was the real star of the shoot</blockquote>
+							<img src="friends.jpg" class="post-img" style="margin-bottom: 15px;">
+							<table width="100%" style="font-size: 15px; text-align: center; color: black; margin-bottom: 10px;">
+								<tr>
+									<td width="33.33%"><span class="glyphicon glyphicon-comment"></span> Comment</td>
+									<td width="33.33%"><span class="glyphicon glyphicon-thumbs-up"></span> Like</td>
+									<td width="33.33%"><span class="glyphicon glyphicon-share-alt"></span> Share this</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="content-post">
+							<table width="100%" style="margin-bottom: 10px;">
+								<tr>
+									<td width="8%" style="padding-right: 10px;"><img src="pp3.jpg" class="pp"></td>
+									<td width="88%"><h5 style="padding: 0; margin:0 0 8px 0;"><a href title="" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Open Season is near">Josef Salvat</a> posted:</h5></td>
+									<td width="4%"><a style="cursor: pointer;"><span class="glyphicon glyphicon-trash"></span></a></td>
+								</tr>
+							</table>
+							<blockquote class="blockquote">My new album release is just right around the corner.</blockquote>
+							<table width="100%" style="font-size: 15px; text-align: center; color: black; margin-bottom: 10px;">
+								<tr>
+									<td width="33.33%"><span class="glyphicon glyphicon-comment"></span> Comment</td>
+									<td width="33.33%"><span class="glyphicon glyphicon-thumbs-up"></span> Like</td>
+									<td width="33.33%"><span class="glyphicon glyphicon-share-alt"></span> Share this</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="content-post">
+							<table width="100%" style="margin-bottom: 10px;">
+								<tr>
+									<td width="8%" style="padding-right: 10px;"><img src="pp2.png" class="pp"></td>
+									<td width="88%"><h5 style="padding: 0; margin:0 0 8px 0;"><a href title="" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="fly pirates!">MIA Matangi</a> posted:</h5></td>
+									<td width="4%"><a style="cursor: pointer;"><span class="glyphicon glyphicon-trash"></span></a></td>
+								</tr>
+							</table>
+							<blockquote class="blockquote">Absolutely excited to share you my latest work</blockquote>
+							<img src="ek.jpg" class="post-img" style="margin-bottom: 15px;">
+							<table width="100%" style="font-size: 15px; text-align: center; color: black; margin-bottom: 10px;">
+								<tr>
+									<td width="33.33%"><span class="glyphicon glyphicon-comment"></span> Comment</td>
+									<td width="33.33%"><span class="glyphicon glyphicon-thumbs-up"></span> Like</td>
+									<td width="33.33%"><span class="glyphicon glyphicon-share-alt"></span> Share this</td>
+								</tr>
+							</table>
+						</div>
+						<center><ul class="pagination">
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul></center>
+					</div>
+					<div class="col-sm-3">
+						<div style="font-size: 20px;">ADS:</div>
+						<img src="tesla.jpg" width="100%">
+						<br><br>
+						<img src="ads.jpg" width="100%">
+						<br><br>
+						<img src="ads2.jpg" width="100%">
+					</div>
+				</div>
+			</div>
+			<div id="menu1" class="tab-pane fade">
+				<div class="jumbotron headerimg"><h1>Leo Santiago</h1></div>
+				<div class="row">
+					<div class="col-sm-9">
+							<div style="width: 100%" class="profile-post">
+								<table width="100%" style="margin-bottom: 10px;">
+									<tr>
+										<td width="8%" style="padding-right: 10px;"><img src="trash.jpg" class="pp"></td>
+										<td width="88%"><h5 style="padding: 0; margin:0 0 8px 0;"><a href title="" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="2long!">Leo Santiago</a> posted:</h5></td>
+										<td width="4%"><a style="cursor: pointer;"><span class="glyphicon glyphicon-trash"></span></a></td>
+									</tr>
+								</table>
+								<blockquote class="blockquote">Pagod na sa #pagaaral</blockquote>
+								<img src="study.jpg" class="post-img" style="margin-bottom: 15px;">
+								<table width="100%" style="font-size: 15px; text-align: center; color: black; margin-bottom: 10px;">
+									<tr>
+										<td width="33.33%"><span class="glyphicon glyphicon-comment"></span> Comment</td>
+										<td width="33.33%"><span class="glyphicon glyphicon-thumbs-up"></span> Like</td>
+										<td width="33.33%"><span class="glyphicon glyphicon-share-alt"></span> Share this</td>
+									</tr>
+								</table>
+							</div>
+
+							<div style="width: 100%" class="profile-post">
+								<table width="100%" style="margin-bottom: 10px;">
+									<tr>
+										<td width="8%" style="padding-right: 10px;"><img src="trash.jpg" class="pp"></td>
+										<td width="88%"><h5 style="padding: 0; margin:0 0 8px 0;"><a href title="" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="2long!">Leo Santiago</a> changed his profile picture:</h5></td>
+										<td width="4%"><a style="cursor: pointer;"><span class="glyphicon glyphicon-trash"></span></a></td>
+									</tr>
+								</table>
+								<blockquote class="blockquote">WOW RIGHT WHERE I BELONG</blockquote>
+								<img src="trash.jpg" class="post-img" style="margin-bottom: 15px;">
+								<table width="100%" style="font-size: 15px; text-align: center; color: black; margin-bottom: 10px;">
+									<tr>
+										<td width="33.33%"><span class="glyphicon glyphicon-comment"></span> Comment</td>
+										<td width="33.33%"><span class="glyphicon glyphicon-thumbs-up"></span> Like</td>
+										<td width="33.33%"><span class="glyphicon glyphicon-share-alt"></span> Share this</td>
+									</tr>
+								</table>
+							</div>
+
+							<div style="width: 100%" class="profile-post">
+								<table width="100%" style="margin-bottom: 10px;">
+									<tr>
+										<td width="8%" style="padding-right: 10px;"><img src="trash.jpg" class="pp"></td>
+										<td width="88%"><h5 style="padding: 0; margin:0 0 8px 0;"><a href title="" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="2long!">Leo Santiago</a> is in love with his bespren:</h5></td>
+										<td width="4%"><a style="cursor: pointer;"><span class="glyphicon glyphicon-trash"></span></a></td>
+									</tr>
+								</table>
+								<blockquote class="blockquote">MAHAL KO ANG NAMUMUKOD TANGI KONG KAIBIHGAN NGAYONG PASKO!! LOVE U BABE</blockquote>
+								<img src="bespren.jpg" class="post-img" style="margin-bottom: 15px;">
+								<table width="100%" style="font-size: 15px; text-align: center; color: black; margin-bottom: 10px;">
+									<tr>
+										<td width="33.33%"><span class="glyphicon glyphicon-comment"></span> Comment</td>
+										<td width="33.33%"><span class="glyphicon glyphicon-thumbs-up"></span> Like</td>
+										<td width="33.33%"><span class="glyphicon glyphicon-share-alt"></span> Share this</td>
+									</tr>
+								</table>
+							</div>
+
+							<div style="width: 100%" class="profile-post">
+								<table width="100%" style="margin-bottom: 10px;">
+									<tr>
+										<td width="8%" style="padding-right: 10px;"><img src="trash.jpg" class="pp"></td>
+										<td width="88%"><h5 style="padding: 0; margin:0 0 8px 0;"><a href title="" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="2long!">Leo Santiago</a> posted:</h5></td>
+										<td width="4%"><a style="cursor: pointer;"><span class="glyphicon glyphicon-trash"></span></a></td>
+									</tr>
+								</table>
+								<blockquote class="blockquote">pasa sana sa defence lol nawalan ako ng ulirat pero worth it!!! WOO.</blockquote>
+								<table width="100%" style="font-size: 15px; text-align: center; color: black; margin-bottom: 10px;">
+									<tr>
+										<td width="33.33%"><span class="glyphicon glyphicon-comment"></span> Comment</td>
+										<td width="33.33%"><span class="glyphicon glyphicon-thumbs-up"></span> Like</td>
+										<td width="33.33%"><span class="glyphicon glyphicon-share-alt"></span> Share this</td>
+									</tr>
+								</table>
+							</div>
+						<center><ul class="pagination">
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul></center>
+					</div>
+					<div class="col-sm-3">
+						<div style="font-size: 20px;">ADS:</div>
+						<img src="ads3.png" width="100%">
+						<br><br>
+						<img src="ads3.jpg" width="100%">
+						<br><br>
+						<img src="ads4.jpeg" width="100%">
+					</div>
+				</div>
+			</div>
+			<div id="menu3" class="tab-pane fade">
+				<DIV class="row">
+					<div class="col-sm-10">
+						<div class="tab-content">
+							<div id="gen" class="tab-pane fade in active">
+								<div class="page-header"><h1>General Settings</h1></div>
+								<div class="alert alert-success alert-dismissable">
+									<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+									<strong>Success!</strong> You've just verified your email. Enjoy using BuzzBee!
+								</div>
+								<table class="table table-hover table-striped">
+									<tr>
+										<th>Name</th>
+										<td>Leo Santiago</td>
+									</tr>
+									<tr>
+										<th>Profile Description</th>
+										<td>2long!</td>
+									</tr>
+									<tr>
+										<th>Username</th>
+										<td>leosantiagoiii</td>
+									</tr>
+									<tr>
+										<th>contact number</th>
+										<td>+12323234343</td>
+									</tr>
+									<tr>
+										<th>email</th>
+										<td>wowzaa_ang_galing@gmail.com</td>
+									</tr>
+								</table>
+							</div>
+							<div id="sec" class="tab-pane fade in">
+								<div class="page-header"><h1>Security Settings</h1></div>
+									<div class="alert alert-danger alert-dismissable">
+    								<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+    								<strong>Hold on!</strong> Change your contact number and/or email address.
+    							</div>
+								<table class="table table-hover table-striped">
+									<tr>
+										<th>Last login location</th>
+										<td>Helsinki, Finland</td>
+									</tr>
+									<tr>
+										<th>2-factor authentication</th>
+										<td>off</td>
+									</tr>
+									<tr>
+										<th>One time login</th>
+										<td>on</td>
+									</tr>
+									<tr>
+										<th>Change Password</th>
+										<td>Current Password: GUT*M_NA_KO_123</td>
+									</tr>
+								</table>
+							</div>
+							<div id="blkd" class="tab-pane fade in">
+								<div class="page-header"><h1>Blocked Accounts</h1></div>
+								<table class="table table-hover table-striped">
+									<tr>
+										<td>Claudia	Steele</td>
+									</tr>
+									<tr>
+										<td>Carl Cobb</td>
+									</tr>
+									<tr>
+										<td>Sonja Alvarado</td>
+									</tr>
+									<tr>
+										<td>Chris Jensen</td>
+									</tr>
+									<tr>
+										<td>Gary Ortiz</td>
+									</tr>
+									<tr>
+										<td>Deidra Schuster</td>
+									</tr>
+									<tr>
+										<td>Sandra Cruz</td>
+									</tr>
+									<tr>
+										<td>Monica Balbuebo</td>
+									</tr>
+									<tr>
+										<td>Samir Dimayuga</td>
+									</tr>
+								</table>
+							</div>
+							<div id="lang" class="tab-pane fade in">
+								<div class="page-header"><h1>Language & Region</h1></div>
+								<div class="dropdown">
+									<button type="button" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width: 70%;">Languages</button>
+									<ul class="dropdown-menu" style="width: 70%;">
+										<li><a href="" class="active">Filipino</a></li>
+										<li><a href="">Bahasa Indonesia</a></li>
+										<li><a href="">Bahasa Melayu</a></li>
+										<li><a href="">Thai</a></li>
+										<li><a href="">English</a></li>
+										<li><a href="">Bisaya</a></li>
+										<li class="disabled"><a href="">Suomi/Polska (coming soon)</a></li>
+										<li><a href="">Polska</a></li>
+										<li class="disabled"><a href="">Español (coming soon)</a></li>
+										<li><a href="">Japanese</a></li>
+									</ul><br><br>
+								</div>
+								<table class="table table-hover table-striped">
+									<tr>
+										<th>Your Last Locations:</th>
+									</tr>
+									<tr>
+										<td>Jakarta, Indonesia</td>
+									</tr>
+									<tr>
+										<td>Hawaii, USA</td>
+									</tr>
+									<tr>
+										<td>Warsawa, Poland</td>
+									</tr>
+									<tr>
+										<td>Munich, Germany</td>
+									</tr>
+									<tr>
+										<td>Brimingham, U.K.</td>
+									</tr>
+									<tr>
+										<td>Mexico City, Mexico</td>
+									</tr>
+									<tr>
+										<td>Lahore, Pakistan</td>
+									</tr>
+									<tr>
+										<td>Arkansas, U.S.A.</td>
+									</tr>
+									<tr>
+										<td>Cairo, Egypt</td>
+									</tr>
+								</table>
+							</div>
+							<button type="button" class="btn btn-info">Save Settings</button>
+							<br><br><br><br><br><br><br><br>
+							<br><br><br><br><br>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<ul class="nav nav-pills nav-stacked">
+					        <li class="active"><a data-toggle="pill" href="#gen">General</a></li>
+					        <li><a data-toggle="pill" href="#sec">Security</a></li>
+					        <li><a data-toggle="pill" href="#blkd">Blocked User Accounts</a></li>
+					        <li><a data-toggle="pill" href="#lang">Language & Region</a></li>
+					    </ul>
+					</div>
+				</DIV>
+			</div>
+			<div id="menu4" class="tab-pane fade">
+				<h1>You've logged out</h1>
+				<P>THANK YOU</P>
+				<br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+</body>
+</html>
