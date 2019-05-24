@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tanauan City College</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<style>
+		body{
+			padding:0;
+			margin:0;
+		}
+		main{
+			width: 100%;
+		}
+		@font-face{
+			font-family:lora_regular;
+			src:url("font/lora_reg.ttf");
+		}
+		@font-face{
+			font-family:lora_italic;
+			src:url("font/lora_it.ttf");
+		}
+		@font-face{
+			font-family:poppins_regular;
+			src:url("font/PoppinsRegular.otf");
+		}
+		@font-face{
+			font-family:poppins_light;
+			src:url("font/Poppins-Light.otf");
+		}
+		@font-face{
+			font-family:poppins_bold;
+			src:url("font/Poppins-Bold.otf");
+		}
+		@font-face{
+			font-family:roboto_thin;
+			src:url("font/Roboto-Thin.ttf");
+		}
+		@font-face{
+			font-family:roboto_black;
+			src:url("font/Robotoblack.ttf");
+		}
+		@font-face{
+			font-family:roboto_regular;
+			src:url("font/Roboto-Regular.ttf");
+		}
+		header{
+			width:100%;
+			box-sizing: border-box;
+			align-items: center;
+  			display: flex;
+		}
+		.header_items{
+			float:left;
+			padding:10px 30px 5px 70px;
+		}
+		.left_header{
+			width:45%;
+		}
+		.left_header > a > img {
+			-webkit-filter: grayscale(100%);
+  			filter: grayscale(100%);
+  			transition:0.5s;
+		}
+		.left_header > a > img:hover{
+			-webkit-filter: grayscale(0%);
+  			filter: grayscale(0%);
+  			transition:0.5s;
+		}
+		.right_header{
+			width:55%;
+		}
+		.right_header > ul > li > a {
+			text-decoration: none;
+		}
+		.right_header > ul > li > a:hover {
+			text-decoration: none;
+		}
+		.header_items > ul{
+			display: flex;
+			justify-content: space-around;
+			font-family: poppins_regular;
+			text-transform: uppercase;
+			font-size:1.8vh;
+		}
+		.header_items > ul > li{
+			list-style: none;
+		}
+		header::after{
+			content:"";
+			clear:both;
+			display:table;
+		}
+		#header_logo{
+			width:70vh;
+		}
+		.dropdown_mn > a{
+			font-size:12px;
+		}
+		.head_h > li >a {
+			color:black;
+		}
+		.carousel-item > img{
+		object-fit: cover;
+		height:630px;
+		}
+		.news_ann_img{
+			object-fit: cover;
+			width:100%;
+			height:100px;
+		}
+		.news_ann_title{
+			font-family: roboto_regular;
+			padding:0;
+			margin:0;
+		}
+		#div_view_home_button{
+			margin:40px 0;
+		}
+		#view_home_button{
+			padding:20px 30px;
+			border-width:0.5px;
+			border-style: solid;
+			box-shadow: 2px 2px black;
+			color:black;
+			transition:0.3s;
+		}
+		#view_home_button:hover{
+			transition:0.3s;
+			background-image: url('images/animate.gif');
+			background-size: cover;
+			background-position:center;
+			text-decoration: none;
+			box-shadow: 7px 7px black;
+		}
+		#grid-gal{
+			display: grid;
+			grid-template-columns: repeat(auto-fill,minmax(400px,auto));
+			grid-auto-rows: minmax(300px, auto);
+			grid-gap:1rem;
+		}
+		@supports(display:grid){
+			.grid-item{
+				padding:30px;
+				margin:0;
+				max-width: none;
+				/*background:#ddd;*/
+			}
+			.grid-item:nth-child(odd){
+				/*background: #ccc;*/
+			}
+			.grid-item > .grid_h1{
+				font-family: poppins_bold;
+				font-size:1.7em;
+				text-align:center;
+				text-transform: uppercase;
+			}
+			.grid-item > .grid_img{
+				text-align: center;
+			}
+		}
+		.rokien{
+			position:relative;
+			background-image: url("images/about_img.png");
+			background-size:cover;
+		}
+		#learnmore{
+			font-family: lora_italic;
+			position: absolute;
+			top: 50%;
+			left: 20%;
+			transform: translate(-20%, -50%);
+			font-size:45px;
+			padding-left:0px;
+			transition: 0.4s;
+		}
+		#learnmore:hover{
+			transition: 0.4s;
+			padding-left:50px;
+		}
+		.carousel-caption > h3{
+			font-family: poppins_regular;
+			font-weight: bolder;
+			text-transform: capitalize;
+			padding:10px;
+			background-color:black;
+			display: inline;
+		}
+		.carousel-caption > div > p{
+			display: inline;
+			padding:3px;
+			opacity: 0.9;
+		}
+		.site-footer
+		{
+		  background-color:#26272b;
+		  padding:80px 0;
+		  font-size:15px;
+		  line-height:24px;
+		  color:#737373;
+		}
+		.site-footer hr
+		{
+		  border-top-color:#bbb;
+		  opacity:0.5
+		}
+		.site-footer hr.small
+		{
+		  margin:20px 0
+		}
+		.site-footer h6
+		{
+		  color:#fff;
+		  font-size:16px;
+		  text-transform:uppercase;
+		  margin-top:5px;
+		  letter-spacing:2px
+		}
+		.site-footer a
+		{
+		  color:#737373;
+		}
+		.site-footer a:hover
+		{
+		  color:#3366cc;
+		  text-decoration:none;
+		}
+		.footer-links
+		{
+		  padding-left:0;
+		  list-style:none
+		}
+		.footer-links li
+		{
+		  display:block
+		}
+		.footer-links a
+		{
+		  color:#737373
+		}
+		.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+		{
+		  color:#3366cc;
+		  text-decoration:none;
+		}
+		.footer-links.inline li
+		{
+		  display:inline-block
+		}
+		.site-footer .social-icons
+		{
+		  text-align:right
+		}
+		.site-footer .social-icons a
+		{
+		  width:40px;
+		  height:40px;
+		  line-height:40px;
+		  margin-left:6px;
+		  margin-right:0;
+		  border-radius:100%;
+		  background-color:#33353d
+		}
+		.copyright-text
+		{
+		  margin:0
+		}
+		@media (max-width:991px)
+		{
+		  .site-footer [class^=col-]
+		  {
+		    margin-bottom:30px
+		  }
+		}
+		@media (max-width:767px)
+		{
+		  .site-footer
+		  {
+		    padding-bottom:0
+		  }
+		  .site-footer .copyright-text,.site-footer .social-icons
+		  {
+		    text-align:center
+		  }
+		}
+		.social-icons
+		{
+		  padding-left:0;
+		  margin-bottom:0;
+		  list-style:none
+		}
+		.social-icons li
+		{
+		  display:inline-block;
+		  margin-bottom:4px
+		}
+		.social-icons li.title
+		{
+		  margin-right:15px;
+		  text-transform:uppercase;
+		  color:#96a2b2;
+		  font-weight:700;
+		  font-size:13px
+		}
+		.social-icons a{
+		  background-color:#eceeef;
+		  color:#818a91;
+		  font-size:16px;
+		  display:inline-block;
+		  line-height:44px;
+		  width:44px;
+		  height:44px;
+		  text-align:center;
+		  margin-right:8px;
+		  border-radius:100%;
+		  -webkit-transition:all .2s linear;
+		  -o-transition:all .2s linear;
+		  transition:all .2s linear
+		}
+		.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+		{
+		  color:#fff;
+		  background-color:#29aafe
+		}
+		.social-icons.size-sm a
+		{
+		  line-height:34px;
+		  height:34px;
+		  width:34px;
+		  font-size:14px
+		}
+		.social-icons a.facebook:hover
+		{
+		  background-color:#3b5998
+		}
+		.social-icons a.twitter:hover
+		{
+		  background-color:#00aced
+		}
+		.social-icons a.linkedin:hover
+		{
+		  background-color:#007bb6
+		}
+		.social-icons a.dribbble:hover
+		{
+		  background-color:#ea4c89
+		}
+		@media (max-width:767px)
+		{
+		  .social-icons li.title
+		  {
+		    display:block;
+		    margin-right:0;
+		    font-weight:600
+		  }
+		}
+	</style>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- <header class="bg-warning"> -->
+	<header class="bg-white">
+		<div class="header_items left_header">
+			<a href="index.php">
+				<img src="images/header_photo.png" alt="" id="header_logo">
+			</a>
+		</div>
+		<div class="header_items right_header">
+			<!-- <ul>
+				<li><a href="" style="color:#252525">Home</a></li>
+				<li><a href="" style="color:#252525">Apply</a></li>
+				<li><a href="" style="color:#252525">Exam Results</a></li>
+				<li><a href="" style="color:#252525">Qualified Applicants</a></li>
+				<li><a href="" style="color:#252525">Courses</a></li>
+				<li><a href="" style="color:#252525">Login</a></li>
+			</ul> -->
+			<ul class="nav justify-content-end head_h">
+				<li class="nav-item">
+					<a class="nav-link" href="index.php">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="about.php">About TCC</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Student Life</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">COURSES</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admissions</a>
+					<div class="dropdown-menu dropdown_mn dropdown-menu-right">
+						<a class="dropdown-item" href="#">Qualified Applicants</a>
+						<a class="dropdown-item" href="#">Apply</a>
+						<a class="dropdown-item" href="#">Exam Results</a>
+						<!-- <div class="dropdown-divider"></div> -->
+						<!-- <a class="dropdown-item" href="#">Separated link</a> -->
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
+					<div class="dropdown-menu dropdown_mn dropdown-menu-right">
+						<a class="dropdown-item" href="#">Administrator</a>
+						<a class="dropdown-item" href="#">Faculty</a>
+						<a class="dropdown-item" href="#">Students</a>
+						<!-- <div class="dropdown-divider"></div> -->
+						<!-- <a class="dropdown-item" href="#">Separated link</a> -->
+					</div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<div style="padding:0.5px 0;background-color:#252525;"></div>
+
+	<main>
+		<script>
+			$('.carousel').carousel({
+				interval:0.5;
+			});
+		</script>
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:100%;">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="https://london.ac.uk/sites/default/files/styles/promo_large/public/2019-03/mercy-nidivo-nairobi.jpg?itok=YWbn6tMW" alt="First slide">
+					<div class="carousel-caption d-none d-md-block">
+						<h3>graduation 2018 has been a success</h3>
+						<div style="margin-top:15px;"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quam, eos obcaecati aliquid iste excepturi.</p></div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="https://london.ac.uk/sites/default/files/styles/promo_large/public/2017-11/alumni-events-pakistan.JPG?itok=RWejRLpz" alt="Second slide">
+					<div class="carousel-caption d-none d-md-block">
+						<h3>Women's Month is an essential part for the college</h3>
+						<div style="margin-top:15px;"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quam, eos obcaecati aliquid iste excepturi.</p></div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="https://london.ac.uk/sites/default/files/styles/promo_large/public/2017-11/best-tips-interviews.jpg?itok=STsr2E_S" alt="Third slide">
+					<div class="carousel-caption d-none d-md-block">
+						<h3>Have a successful year in tanauan city college</h3>
+						<div style="margin-top:15px;"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quam, eos obcaecati aliquid iste excepturi.</p></div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<div class="mt-5"></div>
+		<!-- <div style="padding: 2vh 20vh 2vh;"> -->
+		<div class="container mb-4">
+			<div class="row">
+				<div class="col-lg-6 mb-4">
+					<h3 class="mb-2" style="font-family:poppins_regular;font-weight:200px;padding:0;margin:0;text-transform:uppercase;">NEWS</h3>
+					<div class="row mb-3">
+						<div class="col-lg-3" style="text-align:justify;">
+							<img src="https://london.ac.uk/sites/default/files/styles/story_large/public/2018-08/computer-science-123.jpg?itok=tM7AwhPX" class="news_ann_img">
+						</div>
+						<div class="col-lg-9">
+							<h5 class="news_ann_title">News 1</h5>
+							<p style="padding:0;margin:0;font-family:lora_regular;text-align:justify;">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus rerum numquam consequatur autem, amet eum, fuga id adipisci ex aperiam!
+							</p>
+							<a href=""><span class="badge badge-pill badge-info" style="background-color:#af2507">Read More</span></a>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-lg-3" style="text-align:justify;">
+							<img src="https://london.ac.uk/sites/default/files/styles/teaser_small/public/2018-01/leading-woemn-early-female-students.jpg?h=c5fdc5bc&itok=aTghx_oG" class="news_ann_img">
+						</div>
+						<div class="col-lg-9">
+							<h5 class="news_ann_title">News 2</h5>
+							<p style="padding:0;margin:0;font-family:lora_regular;text-align:justify;">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus rerum numquam consequatur autem, amet eum, fuga id adipisci ex aperiam!
+							</p>
+							<a href=""><span class="badge badge-pill badge-info" style="background-color:#af2507">Read More</span></a>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-lg-3" style="text-align:justify;">
+							<img src="https://london.ac.uk/sites/default/files/styles/promo_large/public/2019-02/msc-data-science-goldsmiths.jpg?itok=Nl9mR1OF" class="news_ann_img">
+						</div>
+						<div class="col-lg-9">
+							<h5 class="news_ann_title">News 3</h5>
+							<p style="padding:0;margin:0;font-family:lora_regular;text-align:justify;">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus rerum numquam consequatur autem, amet eum, fuga id adipisci ex aperiam!
+							</p>
+							<a href=""><span class="badge badge-pill badge-info" style="background-color:#af2507">Read More</span></a>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-lg-3" style="text-align:justify;">
+							<img src="https://london.ac.uk/sites/default/files/styles/teaser_small/public/2018-10/london-aerial-cityscape-river-thames_1.jpg?itok=OVkGBjKa" class="news_ann_img">
+						</div>
+						<div class="col-lg-9">
+							<h5 class="news_ann_title">News 4</h5>
+							<p style="padding:0;margin:0;font-family:lora_regular;text-align:justify;">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus rerum numquam consequatur autem, amet eum, fuga id adipisci ex aperiam!
+							</p>
+							<a href=""><span class="badge badge-pill badge-info" style="background-color:#af2507">Read More</span></a>
+						</div>
+					</div>
+					<br><br>
+					<a href="" class="btn text-white" style="float:right;background-color:#af2507">VIEW MORE</a>
+				</div>
+
+				<div class="col-lg-6">
+					<h3 class="" style="font-family:poppins_regular;font-weight:200px;padding:0;margin:0;text-transform:uppercase;">ANNOUNCEMENTS</h3>
+					<div class="row mb-3">
+						<div class="col-lg-12">
+							<div class="" style="padding:9px 0px">
+							<h5 class="news_ann_title mb-1">Announcement 1</h5>
+								<p style="padding:0;margin:0;font-family:lora_regular; text-align:justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, delectus similique minus, atque pariatur inventore? Obcaecati culpa hic excepturi et, neque vero commodi optio quibusdam asperiores pariatur praesentium ab dignissimos.</p>
+								<a href=""><span class="badge badge-pill badge-primary text-dark" style="background-color: #fdfc00">Read More</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-lg-12">
+							<div class="" style="padding:9px 0px">
+							<h5 class="news_ann_title mb-1">Announcement 2</h5>
+								<p style="padding:0;margin:0;font-family:lora_regular; text-align:justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus qui nostrum veritatis eligendi nam numquam asperiores ducimus assumenda quo distinctio consequuntur quaerat repudiandae magni quos voluptate, aliquid reprehenderit cum, saepe, pariatur voluptas, odio.</p>
+								<a href=""><span class="badge badge-pill badge-primary text-dark" style="background-color: #fdfc00">Read More</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-lg-12">
+							<div class="" style="padding:9px 0px">
+							<h5 class="news_ann_title mb-1">Announcement 3</h5>
+								<p style="padding:0;margin:0;font-family:lora_regular; text-align:justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta cum, dolor vel eius assumenda quae consequuntur unde repellat, fugiat ab error rem est blanditiis nihil perspiciatis dolorem temporibus quam aspernatur deleniti odio, vero alias consequatur similique! Accusantium nihil, aut sunt!</p>
+								<a href=""><span class="badge badge-pill badge-primary text-dark" style="background-color: #fdfc00">Read More</span></a>
+							</div>
+						</div>
+					</div>
+					<a href="" class="btn text-dark" style="float:right; background-color:#fdfc00">VIEW MORE</a>
+				</div>
+			</div>
+		</div>
+		<hr>
+			<div class="container-fluid mb-4" style="background-color:;padding:30px 0 10px 0">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 style="font-family:roboto_black;font-weight:200px;padding:0;margin-bottom:10px;text-transform:uppercase;text-align:center">HAVE YOU ALREADY APPLIED</h3>
+						<p class="mb-3" style="padding:0;font-family:roboto_regular;text-align:center;">Check Your Exam Results Here</p>
+						<center>
+							<div id="div_view_home_button">
+								<a href="" id="view_home_button">VIEW</a> 
+							</div>
+						</center>
+					</div>
+				</div>
+			</div>
+		<hr>
+		<div class="container-fluid mt-5 mb-5">
+			<h1 style='font-family:lora_regular; text-decoration: ;text-align: center;padding:0;margin-bottom:15px;font-size:3.4em;'>Featured Degrees</h1>
+			<div id="grid-gal">
+				<div class="grid-item">
+					<h2 class="grid_h1">Computer Engineering</h2>
+					<center><img src="images/comp_eng.png" class="card" style="width:35%;padding:10px;"></center>
+					<div class="mt-3" style="text-align: center;font-family: roboto_regular">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum iusto suscipit maiores enim, eum qui non vitae error ad tenetur!
+					</div>
+				</div>
+				<div class="grid-item">
+					<h2 class="grid_h1">ENTREPRENEURSHIP</h2>
+					<center><img src="images/entrep.png" class="card" style="width:35%;padding:10px;"></center>
+					<div class="mt-3" style="text-align: center;font-family: roboto_regular">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum iusto suscipit maiores enim, eum qui non vitae error ad tenetur!
+					</div>
+				</div>
+				<div class="grid-item">
+					<h2 class="grid_h1">ELECTRONICS TECHNOLOGY</h2>
+					<center><img src="images/elec_eng.png" class="card" style="width:35%;padding:10px;"></center>
+					<div class="mt-3" style="text-align: center;font-family: roboto_regular">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum iusto suscipit maiores enim, eum qui non vitae error ad tenetur!
+					</div>
+				</div>
+				<div class="grid-item">
+					<h2 class="grid_h1">AUTOMOTIVE TECHNOLOGY</h2>
+					<center><img src="images/auto.png" class="card" style="width:35%;padding:10px;"></center>
+					<div class="mt-3" style="text-align: center;font-family: roboto_regular">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum iusto suscipit maiores enim, eum qui non vitae error ad tenetur!
+					</div>
+				</div>
+				<div class="grid-item">
+					<h2 class="grid_h1">Public Administration</h2>
+					<center><img src="images/public_ad.png" class="card" style="width:35%;padding:10px;"></center>
+					<div class="mt-3" style="text-align: center;font-family: roboto_regular">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum iusto suscipit maiores enim, eum qui non vitae error ad tenetur!
+					</div>
+				</div>
+				<div class="grid-item">
+					<h2 class="grid_h1">MANAGEMENT ACCOUNTING</h2>
+					<center><img src="images/mg_acc.png" class="card" style="width:35%;padding:10px;"></center>
+					<div class="mt-3" style="text-align: center;font-family: roboto_regular">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum iusto suscipit maiores enim, eum qui non vitae error ad tenetur!
+					</div>
+				</div>
+				<div class="grid-item">
+					<h2 class="grid_h1">Teacher Education</h2>
+					<center><img src="images/educ.png" class="card" style="width:35%;padding:10px;"></center>
+					<div class="mt-3" style="text-align: center;font-family: roboto_regular">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum iusto suscipit maiores enim, eum qui non vitae error ad tenetur!
+					</div>
+				</div>
+				<div class="grid-item">
+					<h2 class="grid_h1">Senior High</h2>
+					<center><img src="images/shs.png" class="card" style="width:35%;padding:10px;"></center>
+					<div class="mt-3" style="text-align: center;font-family: roboto_regular">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum iusto suscipit maiores enim, eum qui non vitae error ad tenetur!
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=" mt-4" style="background-color: #f3f0ec; padding: 40px 15px">
+			<div class="row" style="padding:30px;">
+				<div class="col-lg-7" style="font-family: roboto_regular;line-height:30px;text-align: right;">
+					<h1 style='font-family:lora_regular; text-decoration: ;text-align: right;padding:0;margin-bottom:30px;font-size:3.2em;'>Basic TCC Information</h1>
+					<p>At the outset of the decision of citizen Hon. Mayor Antonio C. Halili to run for the chief executive position of the city of Tanauan, the major platform of his administration was to provide free college education to his city mates many of who, do not have the resources to access and complete tertiary educaiton. Upon his victory in the election, he requested his wife Ms. Gina Yson who belongs to a family of educators, to get her former high school classmates to fast track the organization of a free community college...</p>
+				</div>
+				<div class="col-lg-5 rokien" style="font-size:4em;">
+					<div id="learnmore">Learn More →</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-6">
+					<h6>About Tanauan City Colleges</h6>
+					<p class="text-justify">Making education for all Tanaueños a reality. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe excepturi at quas tempore laborum cumque! Omnis rem explicabo facere mollitia voluptate quas ipsum aspernatur optio obcaecati, pariatur sunt praesentium cumque</p>
+					<h6>Mission</h6>
+					<p class="text-justify">
+						Section II. In implementing its vision, the TCC endeavors:<br>
+						
+							1. to provide relevant educational opportunities geared towards local and global demands of an emerging agro-industrial and industrial-tourist-commercial community at reasonable price for constituents of Tanauan, Batangas and its adjacent municipalities and cities in Luzon;<br>
+							2. to provide quality education through excellence in training and instruction in technology and sciences, and excellence in languages, humanities and the arts;<br>
+							3. to provide advance studies, applied research and extension services, and experimentation in the field of agri-business, commerce and tourism, technology, and social sciences; and <br>
+							4. to model the patriotism and nationalism of its visionary leader in Phil
+					</p>
+
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<h6>Vision</h6>
+					<p class="text-justify">Section I. In 2030, the Tanauan City Collge will be globally competitive self-sustaining technological-vocational college of the constituents of Tanauan, Batangas whicg produces Filipino professionals who are patriotic and nationalistic in character, productively contributing to society, highly skilled and technology-driven.</p>
+					<h6>Degrees Offered</h6>
+					<ul class="footer-links">
+						<li><a href="http://scanfcode.com/category/c-language/">Degree 1</a></li>
+						<li><a href="http://scanfcode.com/category/c-language/">Degree 2</a></li>
+						<li><a href="http://scanfcode.com/category/c-language/">Degree 3</a></li>
+						<li><a href="http://scanfcode.com/category/c-language/">Degree 4</a></li>
+						<li><a href="http://scanfcode.com/category/c-language/">Degree 5</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<h6>Quick Links</h6>
+					<ul class="footer-links">
+						<li><a href="http://scanfcode.com/about/">About Us</a></li>
+						<li><a href="http://scanfcode.com/sitemap/">News</a></li>
+						<li><a href="http://scanfcode.com/sitemap/">Announcements</a></li>
+						<li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+						<li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+						<li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+						<li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+					</ul>
+					<h6>Contact Us</h6>
+					<p>Brgy. Trapiche 1 
+					Tanauan City, Batangas 
+					Phone: (043)-702-4160 / (043)-786-2113
+					Email: tanauancitycollege@gmail.com</p>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-sm-6 col-xs-12">
+					<p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+						<a href="#">TCC</a>.
+					</p>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<ul class="social-icons">
+						<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a class="twitter" href="#"><i class="fa fa-twitter-square"></i></a></li>
+						<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+						<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
